@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif, FontAwesome;
+}
+
+/* Color Palette */
+body {
+  background-color: #011936;
+  padding: 0.5rem;
+}
+body .container {
+  width: 750px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  text-align: center;
+  background-color: #C2EABD;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px #465362;
+  /* Box Shadow Options */
+  /* Box Shadow Preview */
+}
+body .container #title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: #011936;
+}
+body .container span {
+  cursor: default;
+}
+body .container .shadow-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 5px;
+}
+body .container .shadow-options .column {
+  width: 50%;
+  height: 195px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ED254E;
+  color: white;
+}
+body .container .shadow-options .column .input-group { /* Range Divs */
+  justify-content: center;
+  margin-bottom: 5px;
+}
+body .container .shadow-options .column .input-group label {
+  width: 100%;
+  display: inline-block;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+body .container .shadow-options .column .input-group input::-webkit-outer-spin-button, body .container .shadow-options .column .input-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .container .shadow-options .column .input-group input[type=number] {
+  width: 20px;
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+  text-align: center;
+  font-size: 9px;
+  border: 0;
+  margin: 0 !important;
+  border-radius: 5px !important;
+}
+body .container .shadow-options .column .input-group .form-range {
+  width: 85%;
+  cursor: pointer;
+  margin-left: 10px !important;
+}
+body .container .shadow-options .column .bs-color { /* Input Color Div */ }
+body .container .shadow-options .column .bs-color label {
+  width: auto;
+  margin-right: 15px;
+}
+body .container .shadow-options .column .bs-color input[type=color] {
+  width: 50px;
+  height: 25px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+body .container .shadow-options .column .bs-color input[type=color]:hover {
+  scale: 1.05;
+}
+body .container .shadow-options .column .form-check { /* Switch Div */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+body .container .shadow-options .column .form-check label {
+  font-size: 18px;
+}
+body .container .shadow-options .column .form-check input {
+  cursor: pointer;
+  margin-inline: 15px;
+  margin-top: 0;
+}
+body .container .shadow-res {
+  margin: 20px 0;
+}
+body .container .shadow-res .box-shadow-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-color: #F9DC5C;
+  border: 1px solid #465362;
+  margin: auto;
+}
+body .container .shadow-res .box-shadow-preview span {
+  font-size: 12px;
+  opacity: 0.5;
+}
+body .container .shadow-code {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+body .container .shadow-code .form-floating {
+  width: 90%;
+}
+body .container .shadow-code .form-floating textarea {
+  border: 1px solid #011936;
+  border-radius: 5px;
+  color: #011936;
+  overflow: hidden;
+  resize: none;
+  cursor: copy;
+  font-size: 15px;
+}
+body .container .shadow-code .form-floating label {
+  font-size: 13px;
+}
+body .container .shadow-code button {
+  background-color: #ED254E;
+  margin-left: 20px;
+  transition: 0.25s;
+}
+body .container .shadow-code button:hover {
+  background-color: var(--bs-btn-hover-bg);
+  scale: 1.05;
+}/*# sourceMappingURL=styles.css.map */
