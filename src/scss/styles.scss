@@ -121,3 +121,15 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 834px) {
+    .container { width: 470px !important; }
+    .shadow-code {
+        .form-floating {
+            width: 95%;
+            textarea { overflow: visible !important; }
+            label { font-size: 11px !important; }
+        }
+        button { margin-left: 10px !important; }
+    }   
+}

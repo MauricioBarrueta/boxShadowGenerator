@@ -160,4 +160,22 @@ body .container .shadow-code button {
 body .container .shadow-code button:hover {
   background-color: var(--bs-btn-hover-bg);
   scale: 1.05;
+}
+
+@media screen and (max-width: 834px) {
+  .container {
+    width: 470px !important;
+  }
+  .shadow-code .form-floating {
+    width: 95%;
+  }
+  .shadow-code .form-floating textarea {
+    overflow: visible !important;
+  }
+  .shadow-code .form-floating label {
+    font-size: 11px !important;
+  }
+  .shadow-code button {
+    margin-left: 10px !important;
+  }
 }/*# sourceMappingURL=styles.css.map */
