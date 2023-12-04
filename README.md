@@ -4,4 +4,4 @@
 🇺🇸 This website allows you to generate-customize the values ​​of the CSS 'box-shadow' property, the user manipulates the values ​​while displaying the preview of the style, also 
    generates the code with the syntax of the property in order to copy it.
 
-![boxShadow](https://github.com/MauricioBarrueta/boxShadowGenerator/assets/60496232/5b8540cb-870c-4643-84f0-ab9d4be481ea)
+https://github.com/MauricioBarrueta/boxShadowGenerator/issues/1#issue-1964502421
