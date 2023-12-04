@@ -14,122 +14,136 @@ $Charcoal: #465362;
 
 body {
     background-color: $oxfordBlue;
-    padding: 0.5rem;
-    .container {
-        width: 750px; height: auto;
-        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-        padding: 1em; text-align: center;       
-        background-color: $teaGreen; border-radius: 10px; box-shadow:  0px 0px 5px 5px $Charcoal;
-        #title {
-            text-transform: uppercase; font-size: 16px; font-weight: bold;
-            color: $oxfordBlue;
-        }
-        span { cursor: default; }
-
-        /* Box Shadow Options */
-        .shadow-options {
-            display: flex; align-items: center; justify-content: center;
-            flex-wrap: wrap; flex-direction: row; margin-top: 5px;            
-            .column {                
-                width: 50%; height: 195px;
-                padding: 5px; border-radius: 5px;
-                background-color: $redCrayola; color: white;
-
-                .input-group { /* Range Divs */
-                    justify-content: center;      
-                    margin-bottom: 5px; 
-                    label {
-                        width: 100%; display: inline-block;
-                        font-size: 15px;
-                        margin-bottom: 0;
-                    }   
-
-                    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-                        -webkit-appearance: none;
-                        margin: 0;
-                    }
-                    input[type=number] {
-                        width: 20px;
-                        appearance: none; -moz-appearance: textfield;
-                        text-align: center; font-size: 9px;
-                        border: 0; margin: 0 !important; border-radius: 5px !important;
-                    }        
-                    .form-range {
-                        width: 85%; cursor: pointer;
-                        margin-left: 10px !important;                                             
-                    }
-                }
-                .bs-color { /* Input Color Div */
-                    label { 
-                        width: auto; 
-                        margin-right: 15px;
-                    }
-                    input[type = color] {                       
-                        width: 50px; height: 25px;
-                        appearance: none; border: none;
-                        cursor: pointer; transition: 0.25s;
-                        &:hover { scale: 1.05; }
-                    }
-                }
-                .form-check { /* Switch Div */
-                    display: flex; align-items: center; justify-content: center;
-                    margin: 0; padding: 0;
-                    
-                    label { font-size: 18px; }
-                    input {
-                        cursor: pointer;
-                        margin-inline: 15px; margin-top: 0;
-                    }                    
-                }
-            }
-        }
-
-        /* Box Shadow Preview */
-        .shadow-res {
-            margin: 20px 0;
-            .box-shadow-preview {
-                display: flex; align-items: center; justify-content: center;
-                width: 150px; height: 150px; position: relative;
-                background-color: $naplesYellow; border: 1px solid $Charcoal; margin: auto;                   
-                span {
-                    font-size: 12px;
-                    opacity: .5;
-                }
-            }
-        }
-
-        .shadow-code {
-            display: flex; align-items: center;
-            margin: 10px 0; 
-            .form-floating {
-                width: 90%;
-                textarea {
-                    border: 1px solid $oxfordBlue; border-radius: 5px; color: $oxfordBlue;
-                    overflow: hidden; resize: none; cursor: copy;
-                    font-size: 15px;
-                } 
-                label { font-size: 13px; }
-            }
-            button {
-                background-color: $redCrayola;
-                margin-left: 20px; transition: 0.25s;
-                &:hover { 
-                    background-color: var(--bs-btn-hover-bg); 
-                    scale: 1.05;
-                }
-            }
+    .navMenu {
+        text-align: center;
+        padding: 0.5rem;     
+        .active { color: #ED254E; text-shadow: 0px 0px 8px rgba(237, 37, 78, 1); }       
+        a {
+            color: white;
+            font-size: 16px; text-decoration: none; text-transform: uppercase;  
+            padding: 0 1em; border-right: 2px dotted $redCrayola;         
+            transition: all 0.2s ease-in-out;
+            &:last-child { border-right: 0; }
+            &:hover { color: $redCrayola; }
         }
     }
-}
 
-@media screen and (max-width: 834px) {
-    .container { width: 470px !important; }
-    .shadow-code {
-        .form-floating {
-            width: 95%;
-            textarea { overflow: visible !important; }
-            label { font-size: 11px !important; }
-        }
-        button { margin-left: 10px !important; }
-    }   
+    .container, .shadow-options, .form-check, .box-shadow-preview, .shadow-code {
+        display: flex; align-items: center; justify-content: center; flex-wrap: wrap; flex-direction: row;
+    }
+    .container {
+        min-height: 90vh;
+        .card-container {
+            width: auto; max-width: 650px; min-width: 450px; height: auto;
+            padding: 1em; text-align: center;       
+            background-color: $teaGreen; border-radius: 10px; box-shadow:  0px 0px 5px 5px $Charcoal;
+
+            #title {
+                font-size: 15px; font-weight: bold;
+                color: $oxfordBlue; user-select: none;
+            }
+            span { cursor: default; }
+    
+            .shadow-options {                
+                margin: 5px 0;            
+                .column {                
+                    width: 50%; height: 205px; 
+                    padding: 5px; border: 2px solid $oxfordBlue;
+                    background-color: $redCrayola; color: white;
+                    &:first-child { border-radius: 5px 0 0 5px; border-right: 0; }
+                    &:last-child { border-radius: 0 5px 5px 0; border-left: 2px dotted $oxfordBlue; }
+    
+                    .input-group { 
+                        justify-content: center;      
+                        margin-bottom: 5px; 
+                        label {
+                            width: 100%; display: inline-block;
+                            font-size: 15px; margin-bottom: 0;
+                        }       
+                        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+                            -webkit-appearance: none; margin: 0;
+                        }
+                        input[type = number] {
+                            width: 25px; height: 25px;
+                            appearance: none; -moz-appearance: textfield;
+                            text-align: center; font-size: 9px;
+                            border: 0; margin: 0 !important; border-radius: 5px !important;
+                        }        
+                        span {
+                            width: fit-content;
+                            font-size: 12px; line-height: 2;
+                            margin-left: 5px !important;
+                        }
+                        .form-range {
+                            width: 70%; height: 25px; cursor: pointer;
+                            margin-right: 5px !important;                                             
+                        }
+                    }
+                    .form-check, .bs-color { border-top: 2px dotted $oxfordBlue; padding: 5px 0 !important; }
+                    .bs-color { 
+                        margin-bottom: 0;
+                        label { 
+                            width: auto; margin-right: 10px;
+                        }
+                        input[type = color] {  
+                            width: 50px; height: 25px;                           
+                            appearance: none; -webkit-appearance: none; -moz-appearance: none;
+                            border: 0; background: transparent;
+                            cursor: pointer; transition: 0.25s;
+                            &:hover { scale: 1.05; }
+                            &::-webkit-color-swatch {
+                                border-radius: 5px; border: 1px solid white;
+                            }
+                            &::-moz-color-swatch {
+                                border-radius: 5px; border: 1px solid white;
+                            }
+                        }
+                    }
+                    .form-check {                         
+                        margin: 0; padding: 0;                        
+                        label { font-size: 15px; }
+                        input {
+                            cursor: pointer;
+                            margin-inline: 10px; margin-top: 0;
+                        }                    
+                    }
+                }
+            }    
+            .shadow-res {
+                position: relative; z-index: 2;
+                margin: 10px 0;
+                .box-shadow-preview {
+                    width: 135px; height: 135px; position: relative;
+                    background-color: $naplesYellow; border: 2px solid $oxfordBlue; margin: auto;                   
+                    span {
+                        font-size: 16px; letter-spacing: 1px;
+                         opacity: .5; color: $oxfordBlue; user-select: none;
+                    }
+                }
+            }    
+            .shadow-code {
+                flex-wrap: nowrap;
+                margin-top: 15px;
+                .form-floating {
+                    width: 100%;
+                    textarea {
+                        height: fit-content;
+                        border: 2px solid $oxfordBlue; border-radius: 5px;
+                        cursor: copy;
+                        font-size: 14px; color: $oxfordBlue;
+                        &::selection { background-color: $naplesYellow; }
+                    } 
+                    label { font-size: 14px; }
+                }
+                button {
+                    background-color: $redCrayola;
+                    margin-left: 5px; transition: 0.25s;
+                    &:hover { 
+                        background-color: var(--bs-btn-hover-bg); 
+                        scale: 1.05;
+                    }
+                }
+            }
+        }       
+    }
 }
