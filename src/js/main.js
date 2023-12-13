@@ -2,7 +2,7 @@ const hOffset = document.getElementById('hOffset'), vOffset = document.getElemen
     spread = document.getElementById('spread'), opacity = document.getElementById('opacity'), borderRadius = document.getElementById('border')
 const hOffsetValue = document.getElementById('hRange'), opValue = document.getElementById('opaRange'), 
     vOffsetValue = document.getElementById('vRange'), borderValue = document.getElementById('radiusRange')
-const colorShadow = document.getElementById('color').value, insetShadow = document.getElementById('inset')
+const colorShadow = document.getElementById('color'), insetShadow = document.getElementById('inset')
 
 const generatedBoxShadow = document.querySelector('.box-shadow-preview'), boxShadowCode = document.getElementById('bs-code'),
     boxShadowOptions = document.querySelectorAll('.shadow-options input')
@@ -17,10 +17,11 @@ boxShadowOptions.forEach((range) => {
     range.addEventListener('input', generateOrUpdateBoxShadow)
 });
 insetShadow.addEventListener('change', () => { generateOrUpdateBoxShadow() })
+colorShadow.addEventListener('change', () => { generateOrUpdateBoxShadow() })
 
 /* Genera la vista previa y el código de box-shadow */
 function generateOrUpdateBoxShadow() {
-    const code = `${insetShadow.checked ? 'inset ' : ''} ${hOffset.value}px ${vOffset.value}px ${blurRadius.value}px ${spread.value}px ${hexColorToRgba(colorShadow, opacity.value)}`
+    const code = `${insetShadow.checked ? 'inset ' : ''} ${hOffset.value}px ${vOffset.value}px ${blurRadius.value}px ${spread.value}px ${hexColorToRgba(colorShadow.value, opacity.value)}`
 
     generatedBoxShadow.style.boxShadow = code
     generatedBoxShadow.style.borderRadius = `${borderRadius.value}%`
