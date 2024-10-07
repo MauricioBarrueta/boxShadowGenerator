@@ -32,7 +32,7 @@ body {
         display: flex; align-items: center; justify-content: center; flex-wrap: wrap; flex-direction: row;
     }
     .container {
-        min-height: 90vh;
+        min-height: 100vh;
         .card-container {
             width: auto; max-width: 650px; min-width: 450px; height: auto;
             padding: 1em; text-align: center;       
@@ -45,13 +45,13 @@ body {
             span { cursor: default; }
     
             .shadow-options {                
-                margin: 5px 0;            
+                margin-top: 5px;            
                 .column {                
                     width: 50%; height: 205px; 
-                    padding: 5px; border: 2px solid $oxfordBlue;
+                    padding: 5px; border: 2px solid $oxfordBlue; border-bottom-style: dotted;
                     background-color: $redCrayola; color: white;
-                    &:first-child { border-radius: 5px 0 0 5px; border-right: 0; }
-                    &:last-child { border-radius: 0 5px 5px 0; border-left: 2px dotted $oxfordBlue; }
+                    &:first-child { border-radius: 5px 0 0 0; border-right: 0; }
+                    &:last-child { border-radius: 0 5px 0 0; border-left: 2px dotted $oxfordBlue; }
     
                     .input-group { 
                         justify-content: center;      
@@ -109,6 +109,15 @@ body {
                     }
                 }
             }    
+            .reset-container {
+                background-color: $redCrayola; border: 2px solid $oxfordBlue; border-top: 0; 
+                border-radius: 0 0 5px 5px; padding: 5px;
+                .reset-btn {
+                    background-color: $Charcoal; padding: 5px 10px;
+                    font-size: 12px;
+                    &:hover { background-color: #000; }
+                }
+            }
             .shadow-res {
                 position: relative; z-index: 2;
                 margin: 10px 0;
