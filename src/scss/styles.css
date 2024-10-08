@@ -41,7 +41,7 @@ body .container, body .shadow-options, body .form-check, body .box-shadow-previe
   flex-direction: row;
 }
 body .container {
-  min-height: 90vh;
+  min-height: 100vh;
 }
 body .container .card-container {
   width: auto;
@@ -66,22 +66,23 @@ body .container .card-container span {
   cursor: default;
 }
 body .container .card-container .shadow-options {
-  margin: 5px 0;
+  margin-top: 5px;
 }
 body .container .card-container .shadow-options .column {
   width: 50%;
   height: 205px;
   padding: 5px;
   border: 2px solid #011936;
+  border-bottom-style: dotted;
   background-color: #ED254E;
   color: white;
 }
 body .container .card-container .shadow-options .column:first-child {
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 0;
   border-right: 0;
 }
 body .container .card-container .shadow-options .column:last-child {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 0 0;
   border-left: 2px dotted #011936;
 }
 body .container .card-container .shadow-options .column .input-group {
@@ -167,6 +168,21 @@ body .container .card-container .shadow-options .column .form-check input {
   cursor: pointer;
   margin-inline: 10px;
   margin-top: 0;
+}
+body .container .card-container .reset-container {
+  background-color: #ED254E;
+  border: 2px solid #011936;
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
+  padding: 5px;
+}
+body .container .card-container .reset-container .reset-btn {
+  background-color: #465362;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+body .container .card-container .reset-container .reset-btn:hover {
+  background-color: #000;
 }
 body .container .card-container .shadow-res {
   position: relative;

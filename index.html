@@ -42,11 +42,10 @@
                         <input type="range" class="form-range" min="0" max="1" step="0.05" value="0.75" id="opacity" oninput="opaRange.value=opacity.value">
                         <input type="number" id="opaRange" min="0" max="1" step="0.05" value="0.75" oninput="opacity.value=opaRange.value"><span>no.</span>
                     </div>
-                    <div class="form-check form-switch">
-                        <label class="form-check-label" for="inset">Outline</label>
-                        <input class="form-check-input" type="checkbox" role="switch" id="inset">
-                        <label class="form-check-label" for="inset">Inset</label>
-                    </div>                 
+                    <div class="input-group bs-color">
+                        <label class="form-label" for="color">Shadow Color:</label>
+                        <input type="color" id="color">
+                    </div>                                     
                 </div>
                 <div class="column">
                     <div class="input-group">
@@ -64,20 +63,20 @@
                         <input type="range" class="form-range" min="0" max="50" step="1" value="0" id="border" oninput="radiusRange.value=border.value">
                         <input type="number" id="radiusRange" min="0" max="50" value="0" oninput="border.value=radiusRange.value"><span>%</span>
                     </div>
-                    <div class="input-group bs-color">
-                        <label class="form-label" for="color">Shadow Color:</label>
-                        <input type="color" id="color">
-                    </div>                 
-                </div>            
+                    <div class="form-check form-switch">
+                        <label class="form-check-label" for="inset">Outline</label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="inset">
+                        <label class="form-check-label" for="inset">Inset</label>
+                    </div>                
+                </div>  
             </div>
-
+            <div class="reset-container"><button class="btn btn-dark reset-btn" onclick="resetRangeValues(), generateOrUpdateBoxShadow()">Restablecer valores &nbsp;&#xf2f9;</button></div>
             <div class="shadow-res">
                 <div class="box-shadow-preview"><span>Vista previa</span></div>
             </div>
-
             <div class="shadow-code">
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="bs-code" style="height: 125px"></textarea>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="bs-code" style="height: 125px" spellcheck="false"></textarea>
                     <label for="bs-code">El código CSS se genera automáticamente:</label>
                 </div>
                 <button class="btn btn-danger copy-btn" title="Copiar código">&#xf0c5;</button>
