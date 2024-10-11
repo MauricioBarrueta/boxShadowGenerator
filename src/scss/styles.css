@@ -41,12 +41,12 @@ body .container, body .shadow-options, body .form-check, body .box-shadow-previe
   flex-direction: row;
 }
 body .container {
-  min-height: 100vh;
+  min-height: 94vh;
 }
 body .container .card-container {
   width: auto;
-  max-width: 650px;
-  min-width: 450px;
+  max-width: 700px;
+  min-width: 400px;
   height: auto;
   padding: 1em;
   text-align: center;
@@ -190,8 +190,8 @@ body .container .card-container .shadow-res {
   margin: 10px 0;
 }
 body .container .card-container .shadow-res .box-shadow-preview {
-  width: 135px;
-  height: 135px;
+  width: 125px;
+  height: 125px;
   position: relative;
   background-color: #F9DC5C;
   border: 2px solid #011936;
@@ -214,8 +214,7 @@ body .container .card-container .shadow-code .form-floating {
   width: 100%;
 }
 body .container .card-container .shadow-code .form-floating textarea {
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 110px;
   border: 2px solid #011936;
   border-radius: 5px;
   cursor: copy;
