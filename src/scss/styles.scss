@@ -32,9 +32,9 @@ body {
         display: flex; align-items: center; justify-content: center; flex-wrap: wrap; flex-direction: row;
     }
     .container {
-        min-height: 100vh;
+        min-height: 94vh;
         .card-container {
-            width: auto; max-width: 650px; min-width: 450px; height: auto;
+            width: auto; max-width: 700px; min-width: 400px; height: auto;
             padding: 1em; text-align: center;       
             background-color: $teaGreen; border-radius: 10px; box-shadow:  0px 0px 5px 5px $Charcoal;
 
@@ -122,7 +122,7 @@ body {
                 position: relative; z-index: 2;
                 margin: 10px 0;
                 .box-shadow-preview {
-                    width: 135px; height: 135px; position: relative;
+                    width: 125px; height: 125px; position: relative;
                     background-color: $naplesYellow; border: 2px solid $oxfordBlue; margin: auto;                   
                     span {
                         font-size: 16px; letter-spacing: 1px;
@@ -136,7 +136,7 @@ body {
                 .form-floating {
                     width: 100%;
                     textarea {
-                        height: fit-content;
+                        height: 110px;
                         border: 2px solid $oxfordBlue; border-radius: 5px;
                         cursor: copy;
                         font-size: 14px; color: $oxfordBlue;

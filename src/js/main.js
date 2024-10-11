@@ -23,7 +23,7 @@ function generateOrUpdateBoxShadow() {
     const code = `${insetShadow.checked ? 'inset ' : ''} ${hOffset.value}px ${vOffset.value}px ${blurRadius.value}px ${spread.value}px ${hexColorToRgba(colorShadow.value, opacity.value)}`
     generatedBoxShadow.style.boxShadow = code
     generatedBoxShadow.style.borderRadius = `${borderRadius.value}%`
-    boxShadowCode.textContent = `box-shadow: ${code};\n\t-webkit-box-shadow: ${code};\n\t-moz-box-shadow: ${code};\nborder-radius: ${borderRadius.value}%;`
+    boxShadowCode.textContent = `box-shadow: ${code};\n-webkit-box-shadow: ${code};\n-moz-box-shadow: ${code};\nborder-radius: ${borderRadius.value}%;`
 }
 
 /* Transforma el color hexadecimal al modelo RGB */
