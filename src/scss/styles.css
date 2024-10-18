@@ -44,9 +44,8 @@ body .container {
   min-height: 94vh;
 }
 body .container .card-container {
-  width: auto;
-  max-width: 700px;
-  min-width: 400px;
+  width: 700px;
+  min-width: 425px;
   height: auto;
   padding: 1em;
   text-align: center;
@@ -142,6 +141,7 @@ body .container .card-container .shadow-options .column .bs-color input[type=col
   -webkit-appearance: none;
   -moz-appearance: none;
   border: 0;
+  border-radius: 10px !important;
   background: transparent;
   cursor: pointer;
   transition: 0.25s;
@@ -150,11 +150,11 @@ body .container .card-container .shadow-options .column .bs-color input[type=col
   scale: 1.05;
 }
 body .container .card-container .shadow-options .column .bs-color input[type=color]::-webkit-color-swatch {
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid white;
 }
 body .container .card-container .shadow-options .column .bs-color input[type=color]::-moz-color-swatch {
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid white;
 }
 body .container .card-container .shadow-options .column .form-check {
@@ -208,7 +208,7 @@ body .container .card-container .shadow-res .box-shadow-preview span {
 }
 body .container .card-container .shadow-code {
   flex-wrap: nowrap;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 body .container .card-container .shadow-code .form-floating {
   width: 100%;
