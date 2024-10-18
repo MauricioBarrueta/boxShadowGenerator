@@ -6,11 +6,7 @@
 }
 
 /* Color Palette */
-$redCrayola: #ED254E;
-$naplesYellow: #F9DC5C;
-$teaGreen: #C2EABD;
-$oxfordBlue: #011936;
-$Charcoal: #465362;
+$redCrayola: #ED254E; $naplesYellow: #F9DC5C; $teaGreen: #C2EABD; $oxfordBlue: #011936; $Charcoal: #465362;
 
 body {
     background-color: $oxfordBlue;
@@ -21,8 +17,7 @@ body {
         a {
             color: white;
             font-size: 16px; text-decoration: none; text-transform: uppercase;  
-            padding: 0 1em; border-right: 2px dotted $redCrayola;         
-            transition: all 0.2s ease-in-out;
+            padding: 0 1em; border-right: 2px dotted $redCrayola; transition: all 0.2s ease-in-out;
             &:last-child { border-right: 0; }
             &:hover { color: $redCrayola; }
         }
@@ -34,7 +29,7 @@ body {
     .container {
         min-height: 94vh;
         .card-container {
-            width: auto; max-width: 700px; min-width: 400px; height: auto;
+            width: 700px; min-width: 425px; height: auto;
             padding: 1em; text-align: center;       
             background-color: $teaGreen; border-radius: 10px; box-shadow:  0px 0px 5px 5px $Charcoal;
 
@@ -51,18 +46,14 @@ body {
                     padding: 5px; border: 2px solid $oxfordBlue; border-bottom-style: dotted;
                     background-color: $redCrayola; color: white;
                     &:first-child { border-radius: 5px 0 0 0; border-right: 0; }
-                    &:last-child { border-radius: 0 5px 0 0; border-left: 2px dotted $oxfordBlue; }
-    
+                    &:last-child { border-radius: 0 5px 0 0; border-left: 2px dotted $oxfordBlue; }    
                     .input-group { 
-                        justify-content: center;      
-                        margin-bottom: 5px; 
+                        justify-content: center; margin-bottom: 5px; 
                         label {
                             width: 100%; display: inline-block;
                             font-size: 15px; margin-bottom: 0;
                         }       
-                        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-                            -webkit-appearance: none; margin: 0;
-                        }
+                        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
                         input[type = number] {
                             width: 25px; height: 25px;
                             appearance: none; -moz-appearance: textfield;
@@ -70,8 +61,7 @@ body {
                             border: 0; margin: 0 !important; border-radius: 5px !important;
                         }        
                         span {
-                            width: fit-content;
-                            font-size: 12px; line-height: 2;
+                            width: fit-content; font-size: 12px; line-height: 2;
                             margin-left: 5px !important;
                         }
                         .form-range {
@@ -82,30 +72,20 @@ body {
                     .form-check, .bs-color { border-top: 2px dotted $oxfordBlue; padding: 5px 0 !important; }
                     .bs-color { 
                         margin-bottom: 0;
-                        label { 
-                            width: auto; margin-right: 10px;
-                        }
+                        label { width: auto; margin-right: 10px; }
                         input[type = color] {  
                             width: 50px; height: 25px;                           
                             appearance: none; -webkit-appearance: none; -moz-appearance: none;
-                            border: 0; background: transparent;
-                            cursor: pointer; transition: 0.25s;
+                            border: 0; border-radius: 10px !important; background: transparent; cursor: pointer; transition: 0.25s;
                             &:hover { scale: 1.05; }
-                            &::-webkit-color-swatch {
-                                border-radius: 5px; border: 1px solid white;
-                            }
-                            &::-moz-color-swatch {
-                                border-radius: 5px; border: 1px solid white;
-                            }
+                            &::-webkit-color-swatch { border-radius: 10px; border: 1px solid white; }
+                            &::-moz-color-swatch { border-radius: 10px; border: 1px solid white; }
                         }
                     }
                     .form-check {                         
                         margin: 0; padding: 0;                        
                         label { font-size: 15px; }
-                        input {
-                            cursor: pointer;
-                            margin-inline: 10px; margin-top: 0;
-                        }                    
+                        input { cursor: pointer; margin-inline: 10px; margin-top: 0; }                    
                     }
                 }
             }    
@@ -131,8 +111,7 @@ body {
                 }
             }    
             .shadow-code {
-                flex-wrap: nowrap;
-                margin-top: 15px;
+                flex-wrap: nowrap; margin-top: 10px;
                 .form-floating {
                     width: 100%;
                     textarea {
