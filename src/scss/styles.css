@@ -69,12 +69,14 @@ body .container .card-container .shadow-options {
 }
 body .container .card-container .shadow-options .column {
   width: 50%;
-  height: 205px;
-  padding: 5px;
+  height: 100%;
+  height: 220.5px;
+  padding: 1em 0.5rem;
   border: 2px solid #011936;
   border-bottom-style: dotted;
   background-color: #ED254E;
   color: white;
+  /* flex-direction: row;  */
 }
 body .container .card-container .shadow-options .column:first-child {
   border-radius: 5px 0 0 0;
@@ -85,6 +87,8 @@ body .container .card-container .shadow-options .column:last-child {
   border-left: 2px dotted #011936;
 }
 body .container .card-container .shadow-options .column .input-group {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 5px;
 }
@@ -93,6 +97,12 @@ body .container .card-container .shadow-options .column .input-group label {
   display: inline-block;
   font-size: 15px;
   margin-bottom: 0;
+}
+body .container .card-container .shadow-options .column .input-group label small {
+  font-size: 9px;
+  color: #F9DC5C;
+  margin: 3px 0 0 8px;
+  cursor: help;
 }
 body .container .card-container .shadow-options .column .input-group input::-webkit-outer-spin-button, body .container .card-container .shadow-options .column .input-group input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -113,35 +123,37 @@ body .container .card-container .shadow-options .column .input-group input[type=
 body .container .card-container .shadow-options .column .input-group span {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 2;
-  margin-left: 5px !important;
+}
+body .container .card-container .shadow-options .column .input-group .input-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
 }
 body .container .card-container .shadow-options .column .input-group .form-range {
-  width: 70%;
+  flex: 1;
   height: 25px;
   cursor: pointer;
-  margin-right: 5px !important;
 }
 body .container .card-container .shadow-options .column .form-check, body .container .card-container .shadow-options .column .bs-color {
+  flex-direction: row;
   border-top: 2px dotted #011936;
-  padding: 5px 0 !important;
+  padding-top: 0.5rem !important;
 }
 body .container .card-container .shadow-options .column .bs-color {
   margin-bottom: 0;
 }
 body .container .card-container .shadow-options .column .bs-color label {
-  width: auto;
+  width: auto !important;
   margin-right: 10px;
 }
 body .container .card-container .shadow-options .column .bs-color input[type=color] {
   width: 50px;
   height: 25px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   border: 0;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
   background: transparent;
   cursor: pointer;
   transition: 0.25s;
@@ -150,12 +162,12 @@ body .container .card-container .shadow-options .column .bs-color input[type=col
   scale: 1.05;
 }
 body .container .card-container .shadow-options .column .bs-color input[type=color]::-webkit-color-swatch {
-  border-radius: 10px;
-  border: 1px solid white;
+  border-radius: 5px;
+  border: 1px solid #011936;
 }
 body .container .card-container .shadow-options .column .bs-color input[type=color]::-moz-color-swatch {
-  border-radius: 10px;
-  border: 1px solid white;
+  border-radius: 5px;
+  border: 1px solid #011936;
 }
 body .container .card-container .shadow-options .column .form-check {
   margin: 0;
@@ -174,7 +186,7 @@ body .container .card-container .reset-container {
   border: 2px solid #011936;
   border-top: 0;
   border-radius: 0 0 5px 5px;
-  padding: 5px;
+  padding: 0.5rem;
 }
 body .container .card-container .reset-container .reset-btn {
   background-color: #465362;
@@ -184,21 +196,24 @@ body .container .card-container .reset-container .reset-btn {
 body .container .card-container .reset-container .reset-btn:hover {
   background-color: #000;
 }
+body .container .card-container .reset-container .reset-btn i {
+  font-size: 10px;
+}
 body .container .card-container .shadow-res {
   position: relative;
   z-index: 2;
   margin: 10px 0;
 }
 body .container .card-container .shadow-res .box-shadow-preview {
-  width: 125px;
-  height: 125px;
+  width: 115px;
+  height: 115px;
   position: relative;
   background-color: #F9DC5C;
   border: 2px solid #011936;
   margin: auto;
 }
 body .container .card-container .shadow-res .box-shadow-preview span {
-  font-size: 16px;
+  font-size: 13px;
   letter-spacing: 1px;
   opacity: 0.5;
   color: #011936;
@@ -214,7 +229,7 @@ body .container .card-container .shadow-code .form-floating {
   width: 100%;
 }
 body .container .card-container .shadow-code .form-floating textarea {
-  height: 110px;
+  min-height: 95px;
   border: 2px solid #011936;
   border-radius: 5px;
   cursor: copy;
@@ -229,6 +244,7 @@ body .container .card-container .shadow-code .form-floating textarea::selection 
 }
 body .container .card-container .shadow-code .form-floating label {
   font-size: 14px;
+  z-index: 0;
 }
 body .container .card-container .shadow-code button {
   background-color: #ED254E;
