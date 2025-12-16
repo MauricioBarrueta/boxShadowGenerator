@@ -2,7 +2,7 @@ const hOffset = document.getElementById('hOffset'), vOffset = document.getElemen
     spread = document.getElementById('spread'), opacity = document.getElementById('opacity'), borderRadius = document.getElementById('border')
 const hOffsetValue = document.getElementById('hRange'), opValue = document.getElementById('opaRange'), vOffsetValue = document.getElementById('vRange'), 
     borderValue = document.getElementById('radiusRange')
-const colorShadow = document.getElementById('color'), insetShadow = document.getElementById('inset')
+const colorShadow = document.getElementById('color'), insetShadow = document.getElementById('inset'), bgColor = document.getElementById('bgColor')
 const generatedBoxShadow = document.querySelector('.box-shadow-preview'), boxShadowCode = document.getElementById('bs-code'),
     boxShadowOptions = document.querySelectorAll('.shadow-options input')
 
@@ -17,13 +17,15 @@ boxShadowOptions.forEach((range) => {
 });
 insetShadow.addEventListener('change', () => { generateOrUpdateBoxShadow() })
 colorShadow.addEventListener('change', () => { generateOrUpdateBoxShadow() })
+bgColor.addEventListener('change', () => {generateOrUpdateBoxShadow()})
 
 /* Genera la vista previa y el código de box-shadow */
 function generateOrUpdateBoxShadow() {
     const code = `${insetShadow.checked ? 'inset ' : ''} ${hOffset.value}px ${vOffset.value}px ${blurRadius.value}px ${spread.value}px ${hexColorToRgba(colorShadow.value, opacity.value)}`
     generatedBoxShadow.style.boxShadow = code
+    generatedBoxShadow.style.background = bgColor.value
     generatedBoxShadow.style.borderRadius = `${borderRadius.value}%`
-    boxShadowCode.textContent = `box-shadow: ${code};\n\nborder-radius: ${borderRadius.value}%; //opcional`
+    boxShadowCode.textContent = `box-shadow: ${code};\nbackground-color: ${bgColor.value.toUpperCase()}; //opcional\nborder-radius: ${borderRadius.value}%; //opcional`
 }
 
 /* Transforma el color hexadecimal al modelo RGB */
@@ -45,4 +47,5 @@ const resetRangeValues = () => {
     hOffsetValue.value = hOffset.value = vOffsetValue.value = vOffset.value = borderRadius.value = borderValue.value = 5
     opValue.value = opacity.value = 0.75     
     insetShadow.checked = false
+    bgColor.value = '#F9DC5C'
 }

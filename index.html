@@ -40,18 +40,19 @@
                             <input type="range" class="form-range" min="0" max="100" step="1" value="0" id="blurRadius" oninput="blurRange.value = blurRadius.value">
                             <input type="number" id="blurRange" min="0" max="100"value="0" oninput="blurRadius.value = blurRange.value"><span>px</span>
                         </div>
-                    </div>
+                    </div>     
                     <div class="input-group">
                         <label for="opacity" class="form-label">opacity</label>
                         <div class="input-row">
                             <input type="range" class="form-range" min="0" max="1" step="0.05" value="0.75" id="opacity" oninput="opaRange.value=opacity.value">
                             <input type="number" id="opaRange" min="0" max="1" step="0.05" value="0.75" oninput="opacity.value=opaRange.value"><span>num.</span>
                         </div>
-                    </div>
+                    </div>               
                     <div class="input-group bs-color">
                         <label class="form-label" for="color">color</label>
                         <input type="color" id="color">
-                    </div>                                     
+                        <small title="Sombra">&#xf05a;</small>
+                    </div>                                                                             
                 </div>
                 <div class="column">
                     <div class="input-group">
@@ -67,20 +68,27 @@
                             <input type="range" class="form-range" min="-10" max="100" step="1" value="1" id="spread" oninput="spreadRange.value=spread.value">
                             <input type="number" id="spreadRange" min="-10" max="100" value="1" oninput="spread.value=spreadRange.value"><span>px</span>
                         </div>                        
-                    </div>
+                    </div>                    
                     <div class="input-group">
-                        <label for="border" class="form-label d-flex align-items-center justify-content-center">border-radius <small title="Opcional">&#xf05a;</small></label>
+                        <label for="border" class="form-label">border-radius<small title="Opcional">&#xf05a;</small></label>
                         <div class="input-row">
                             <input type="range" class="form-range" min="0" max="50" step="1" value="0" id="border" oninput="radiusRange.value=border.value">
                             <input type="number" id="radiusRange" min="0" max="50" value="0" oninput="border.value=radiusRange.value"><span>%</span>
                         </div>                        
-                    </div>
+                    </div> 
+                    <div class="input-group bs-color">
+                        <label class="form-label" for="bgColor">background</label>
+                        <input type="color" id="bgColor" value="#F9DC5C">
+                        <small title="Opcional">&#xf05a;</small>
+                    </div>                          
+                </div>  
+                <div class="column">
                     <div class="form-check form-switch">
                         <label class="form-check-label" for="inset">outline</label>
                         <input class="form-check-input" type="checkbox" role="switch" id="inset">
                         <label class="form-check-label" for="inset">inset</label>
-                    </div>                
-                </div>  
+                    </div> 
+                </div>
             </div>
             <div class="reset-container">
                 <button class="btn btn-dark reset-btn" onclick="resetRangeValues(), generateOrUpdateBoxShadow()">
