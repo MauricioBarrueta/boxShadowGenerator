@@ -4,4 +4,5 @@
 
 🔗 https://mauriciobarrueta.github.io/boxShadowGenerator/
 
-![box-shadow](https://github.com/user-attachments/assets/01e004fe-ea56-4847-ae3b-76416d35bd2f)
+
+<img width="1349" height="674" alt="box-shadow" src="https://github.com/user-attachments/assets/79ad90de-6314-4d27-98b4-32d74facd3d3" />
